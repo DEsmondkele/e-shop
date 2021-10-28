@@ -1,4 +1,4 @@
-package shop.data.repository;
+package com.shop.data.repository;
 
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.BeforeEach;
@@ -6,8 +6,8 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.transaction.annotation.Transactional;
-import shop.data.model.Currency;
-import shop.data.model.Product;
+import com.shop.data.model.Currency;
+import com.shop.data.model.Product;
 
 import java.util.List;
 
@@ -59,6 +59,14 @@ class ProductRepositoryTest {
         productRepositoryImpl.deleteById(110L);
         assertThat(productRepositoryImpl.findById(110L).orElse(null)).isNotNull();
 
+ }
+ @Test
+    public void updateProductById(){
+     Product existingProduct =
+             productRepositoryImpl.findById(110L).orElse(null);
+        assertThat(productRepositoryImpl.findById(110L).orElse(null)).isNotNull();
+        assertThat(existingProduct).isNotNull();
+        log.info("product-->{}",existingProduct);
  }
 
    }

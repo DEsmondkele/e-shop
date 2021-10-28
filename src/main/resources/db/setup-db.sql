@@ -1,3 +1,4 @@
+spring.jpa.open-in-view
 create  database shopdb;
 
 create  user 'shop_user'@'localhost' identified by 'shop123'

@@ -1,4 +1,4 @@
-package shop.data.model;
+package com.shop.data.model;
 
 public enum Currency {
     NGN("Naira"), USD("Dollar"), SRC("Singapore Dollar"), EUR("Euro"), GBP("British Pounds"), FRC("Franc"), GHC("Ghana Cedis");
